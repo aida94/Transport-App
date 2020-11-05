@@ -1,0 +1,16 @@
+<nz-skeleton [nzActive]="true" *ngIf="!arrivals" [nzParagraph]="{ rows: 1 }"></nz-skeleton>
+
+<div *ngIf="arrivals">
+  <div nz-col nzSpan="20" nzOffset="4">
+    <div nz-row class="header">
+      <div nz-col nzSpan="24">
+        Arrivals
+      </div>
+    </div>
+
+    <div *ngFor="let arrival of arrivals" class="arrival">
+      <app-stop-details [stop]="arrival"></app-stop-details>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,30 @@
+<div nz-row>
+  <div nz-col nzSpan="2" [ngStyle]="{'color': stop.line.color?.bg}">
+    {{stop.line.name}}
+  </div>
+
+  <div nz-col nzSpan="14">
+    {{stop.provenance}} {{stop.direction}}
+  </div>
+
+  <div nz-col nzSpan="8" class="remainTime">
+    {{remainTime}}
+  </div>
+
+</div>
+
+<div nz-row>
+  <div nz-col nzSpan="2">
+    <img class="img" src="assets/images/{{stop.line.product}}.png" alt="bus">
+  </div>
+
+  <div nz-col nzSpan="12">
+    <p *ngIf="stop.delay > 0">
+      Delay: <span class="delay"> {{delay}} min</span>
+    </p>
+    <p *ngIf="stop.delay < 0">
+      Early: <span class="early"> {{delay}} min</span>
+    </p>
+  </div>
+
+</div>

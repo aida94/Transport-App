@@ -1,0 +1,27 @@
+<h4>
+  <i nz-icon [nzType]="'heart'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#389e0d'"> </i>
+    Your marked stops
+</h4>
+
+<div class="favourite noData" *ngIf="favoriteList?.length < 1"> No Data</div>
+
+<div *ngFor="let favourite of favoriteList">
+
+    <div nz-row class="favourite">
+      <div nz-col nzSpan="2">
+        <i nz-icon nzType="tag"></i>
+      </div>
+      <div nz-col nzSpan="20">
+        <a [routerLink]="['/details', favourite.id]">
+          {{favourite.name}}
+        </a>
+      </div>
+      <div class="removeIcon" nz-col nzSpan="2" (click)="removeStop(favourite)">
+        <i nz-icon nzType="close" ></i>
+      </div>
+    </div>
+
+</div>
+
+
+

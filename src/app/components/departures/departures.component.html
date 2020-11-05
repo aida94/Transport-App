@@ -1,0 +1,17 @@
+<nz-skeleton [nzActive]="true" *ngIf="!departures" [nzParagraph]="{ rows: 1 }"></nz-skeleton>
+
+<div *ngIf="departures">
+
+  <div nz-col nzSpan="20">
+    <div nz-row class="header">
+      <div nz-col nzSpan="24">
+        Departures
+      </div>
+    </div>
+
+    <div *ngFor="let departure of departures" class="departure">
+      <app-stop-details [stop]="departure"></app-stop-details>
+    </div>
+
+  </div>
+</div>

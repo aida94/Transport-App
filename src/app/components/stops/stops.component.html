@@ -1,0 +1,31 @@
+<h4>
+  <i nz-icon [nzType]="'pushpin'" [nzTheme]="'twotone'" [nzTwotoneColor]="'#ad8b00'"> </i>
+  Near Stops
+</h4>
+
+<div *ngIf="!stops" class="stop noData"> No Data </div>
+
+<div *ngFor="let stop of stops">
+  <a [routerLink]="['/details', stop.id ]">
+    <div nz-row class="stop">
+      <div nz-col nzSpan="2">
+        <img class="img" src="assets/images/stop.png" alt="img">
+      </div>
+      <div nz-col nzSpan="12">
+        {{stop.name}}
+      </div>
+
+      <div nz-col nzSpan="10">
+        <div *ngIf="stop.products">
+          <img class="img" *ngIf="stop.products.bus" src="assets/images/bus.png" alt="bus">
+          <img class="img" *ngIf="stop.products.suburban" src="assets/images/suburban.png" alt="suburban" >
+          <img class="img" *ngIf="stop.products.subway" src="assets/images/subway.png" alt="subway">
+          <img class="img" *ngIf="stop.products.tram" src="assets/images/tram.png" alt="tram">
+          <img class="img" *ngIf="stop.products.express" src="assets/images/express.png" alt="express">
+          <img class="img" *ngIf="stop.products.regional" src="assets/images/regional.png" alt="regional">
+          <img class="img"  src="assets/images/ferry.png" alt="ferry">
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
