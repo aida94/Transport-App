@@ -29,7 +29,7 @@ When user is online in each request I handle te set in local storage all the inf
 
 ### Start & watch
 
-    $ ng serve
+    $ npm start
 
 ### Simple build for production
 
