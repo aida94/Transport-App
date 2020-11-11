@@ -23,8 +23,8 @@ When user is online in each request I handle te set in local storage all the inf
 
 ## Install
 
-    $ git clone https://github.com/aida94/Berlin-transportation-app.git
-    $ cd Berlin-transportation-app
+    $ git clone https://github.com/aida94/Transport-App.git
+    $ cd Transport-App
     $ npm install
 
 ### Start & watch
